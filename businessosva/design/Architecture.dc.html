@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Business OS information architecture</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;font-family:'Geist',system-ui,sans-serif;color:#0B0C0F;-webkit-font-smoothing:antialiased}
+a{color:#7A6440}a:hover{color:#5E4C2E}
+.ia *{box-sizing:border-box}
+.ia h1,.ia h2,.ia p{margin:0}
+.lbl{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#6E6E67}
+.cap{font-size:11.5px;color:#8A8983;font-family:'Geist Mono',monospace}
+.card{background:#fff;border:1px solid #E4E3DE;border-radius:12px}
+.grp{font-size:11px;font-weight:500;color:#8A8983;letter-spacing:.02em}
+.pg{display:grid;grid-template-columns:22px 118px minmax(0,1fr);gap:8px;align-items:baseline;padding:6px 0;border-bottom:1px solid #F0F0EC;font-size:12.5px}
+.pg b{font-weight:600}
+.pg span{color:#6E6E67}
+.nd{position:absolute;width:112px;height:56px;border-radius:10px;background:#fff;border:1px solid #D6D5CF;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:13px;font-weight:600;box-shadow:0 1px 2px rgba(20,20,18,.04)}
+.nd span{font-size:11px;font-weight:400;color:#6E6E67}
+.nd.key{background:#0B0C0F;border-color:#0B0C0F;color:#fff}.nd.key span{color:#D1C1A3}
+.ln{fill:none;stroke:#8A8983;stroke-width:1.5}
+.ln.d{stroke-dasharray:4 4;stroke:#B5B4AD}
+.hd{fill:#8A8983}
+.rl{position:absolute;font-size:10.5px;color:#6E6E67;font-family:'Geist Mono',monospace;background:#FAFAF8;padding:0 3px}
+.fc{display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:6px;background:#fff;border:1px solid #E4E3DE;font-size:12px;font-weight:500;white-space:nowrap}
+.fc.act{background:#EFEAE1;border-color:#DCCFB6;color:#5E4C2E}
+.ar{color:#B5B4AD;font-size:12px}
+.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+</style>
+</helmet>
+<div class="ia" style="width: 1440px; height: 1100px; background: #FAFAF8; padding: 60px 80px; font-size: 13px; line-height: 1.45; display: flex; flex-direction: column; gap: 32px">
+
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px">
+<div>
+<span class="lbl">Business OS for Van Amstel Business Tech · Information architecture</span>
+<h1 style="font-size: 40px; font-weight: 600; letter-spacing: -0.03em; margin-top: 12px; line-height: 1.05">One system, ten views of it</h1>
+<p style="font-size: 15px; color: #4E4E49; margin-top: 10px; max-width: 720px; line-height: 1.55">Every page is a lens on the same connected records. A lead becomes a client, a client owns projects, projects hold tasks, deadlines land in the calendar — and the Daily Brief reads all of it.</p>
+</div>
+<div style="display: flex; gap: 24px; font-size: 12.5px; color: #4E4E49; padding-bottom: 4px">
+<div><div style="font-size: 26px; font-weight: 600; color: #0B0C0F">10</div>primary pages</div>
+<div><div style="font-size: 26px; font-weight: 600; color: #0B0C0F">8</div>connected entities</div>
+<div><div style="font-size: 26px; font-weight: 600; color: #0B0C0F">6</div>detail views</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 520px minmax(0, 1fr); gap: 32px">
+<div class="card" style="padding: 18px 20px">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px"><span class="lbl" style="color: #0B0C0F">Navigation map</span><span class="cap">sidebar order</span></div>
+<div class="grp" style="padding-top: 6px">Home</div>
+<div class="pg"><span class="cap">01</span><b>Dashboard</b><span>Today · Attention needed · My results · Recent activity</span></div>
+<div class="grp" style="padding-top: 10px">Sales</div>
+<div class="pg"><span class="cap">02</span><b>CRM</b><span>Pipeline stages → Lead detail (activity, follow-ups, meetings, proposals, notes, docs) → Convert</span></div>
+<div class="pg"><span class="cap">03</span><b>Clients</b><span>Client list → Client 360 (projects, tasks, finance, docs, timeline)</span></div>
+<div class="grp" style="padding-top: 10px">Delivery</div>
+<div class="pg"><span class="cap">04</span><b>Projects</b><span>List / board → Project (overview, tasks, milestones, docs, team, finance, activity)</span></div>
+<div class="pg"><span class="cap">05</span><b>Tasks</b><span>Today · week · overdue · filters → Task drawer</span></div>
+<div class="pg"><span class="cap">06</span><b>Calendar</b><span>Month · week · day → Event drawer</span></div>
+<div class="grp" style="padding-top: 10px">Business</div>
+<div class="pg"><span class="cap">07</span><b>Finance</b><span>KPIs · revenue · aging → Invoice detail</span></div>
+<div class="pg"><span class="cap">08</span><b>Documents</b><span>Contracts · proposals · invoices · other → Document detail</span></div>
+<div class="pg"><span class="cap">09</span><b>Team</b><span>Members → role-specific performance</span></div>
+<div class="grp" style="padding-top: 10px">Intelligence</div>
+<div class="pg" style="border-bottom: 0"><span class="cap">10</span><b style="color: #5E4C2E">AI Daily Brief</b><span>Replaces notifications — 3 to 7 ranked items, not a feed</span></div>
+</div>
+
+<div class="card" style="padding: 18px 20px; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between"><span class="lbl" style="color: #0B0C0F">Entity model</span><span class="cap">solid = owns · dashed = references</span></div>
+<div style="position: relative; width: 720px; height: 360px; margin: 18px auto 0">
+<svg viewBox="0 0 720 360" style="position: absolute; inset: 0; width: 720px; height: 360px">
+<path class="ln" d="M128 52H160"></path><path class="hd" d="M164 52l-6-4v8z"></path>
+<path class="ln" d="M276 52H308"></path><path class="hd" d="M312 52l-6-4v8z"></path>
+<path class="ln" d="M424 52H456"></path><path class="hd" d="M460 52l-6-4v8z"></path>
+<path class="ln" d="M572 52H604"></path><path class="hd" d="M608 52l-6-4v8z"></path>
+<path class="ln" d="M220 80V172"></path><path class="hd" d="M220 176l-4-6h8z"></path>
+<path class="ln" d="M368 80V172"></path><path class="hd" d="M368 176l-4-6h8z"></path>
+<path class="ln" d="M516 80V172"></path><path class="hd" d="M516 176l-4-6h8z"></path>
+<path class="ln d" d="M336 80L250 176"></path>
+<path class="ln d" d="M400 80L486 176"></path>
+<path class="ln d" d="M368 80C368 130 664 110 664 80"></path>
+<path class="ln d" d="M60 290V80"></path><path class="ln d" d="M220 290V232"></path><path class="ln d" d="M368 290V232"></path><path class="ln d" d="M516 290V232"></path><path class="ln d" d="M664 290V80"></path>
+</svg>
+<div class="nd" style="left: 16px; top: 24px">Lead<span>CRM</span></div>
+<div class="nd" style="left: 164px; top: 24px">Client<span>Clients</span></div>
+<div class="nd key" style="left: 312px; top: 24px">Project<span>central entity</span></div>
+<div class="nd" style="left: 460px; top: 24px">Task<span>Tasks</span></div>
+<div class="nd" style="left: 608px; top: 24px">Calendar<span>deadlines · meetings</span></div>
+<div class="nd" style="left: 164px; top: 176px">Invoice<span>Finance</span></div>
+<div class="nd" style="left: 312px; top: 176px">Document<span>Documents</span></div>
+<div class="nd" style="left: 460px; top: 176px">Person<span>Team</span></div>
+<span class="rl" style="left: 122px; top: 26px">converts</span>
+<span class="rl" style="left: 280px; top: 26px">has</span>
+<span class="rl" style="left: 418px; top: 26px">holds</span>
+<span class="rl" style="left: 574px; top: 26px">due</span>
+<span class="rl" style="left: 226px; top: 120px">billed</span>
+<span class="rl" style="left: 374px; top: 150px">files</span>
+<span class="rl" style="left: 522px; top: 120px">assignee</span>
+<span class="rl" style="left: 560px; top: 104px">milestones</span>
+<div style="position: absolute; left: 16px; top: 290px; width: 704px; height: 54px; border-radius: 10px; background: #EFEAE1; border: 1px solid #DCCFB6; display: flex; align-items: center; gap: 12px; padding: 0 16px; color: #5E4C2E">
+<svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg>
+<b style="font-size: 13px">AI Daily Brief</b><span style="font-size: 12.5px; color: #5E4C2E">reads every entity and its activity — surfaces only what needs a decision today</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 32px">
+<div class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between"><span class="lbl" style="color: #0B0C0F">Prototype flows</span><span class="cap">all clickable in 03</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12.5px; font-weight: 600">A · Sales to delivery</span><div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span class="fc">Dashboard</span><span class="ar">→</span><span class="fc">CRM</span><span class="ar">→</span><span class="fc">Noordzee Foods</span><span class="ar">→</span><span class="fc act">Convert to client</span><span class="ar">→</span><span class="fc">Client</span><span class="ar">→</span><span class="fc">Project</span><span class="ar">→</span><span class="fc">Task</span><span class="ar">→</span><span class="fc">Calendar</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12.5px; font-weight: 600">B · Client 360</span><div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span class="fc">Brightwater BV</span><span class="ar">→</span><span class="fc">Website Redesign</span><span class="ar">→</span><span class="fc">Documents</span><span class="ar">→</span><span class="fc">Finance</span><span class="ar">→</span><span class="fc">INV-2026-1041</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12.5px; font-weight: 600">C · Delivery</span><div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span class="fc">Customer Portal</span><span class="ar">→</span><span class="fc">Tasks</span><span class="ar">→</span><span class="fc act">Change deadline</span><span class="ar">→</span><span class="fc">Calendar moves</span><span class="ar">→</span><span class="fc">Team member</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12.5px; font-weight: 600">D · AI-first morning</span><div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span class="fc">Dashboard</span><span class="ar">→</span><span class="fc act">Daily Brief</span><span class="ar">→</span><span class="fc">Blocker task</span><span class="ar">→</span><span class="fc act">Complete</span><span class="ar">→</span><span class="fc">Item leaves the brief</span></div></div>
+</div>
+<div class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between"><span class="lbl" style="color: #0B0C0F">How the brief decides</span><span class="cap">not a feed</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="border: 1px solid #E4E3DE; border-radius: 10px; padding: 12px"><span class="cap">1 · Read</span><div style="font-size: 20px; font-weight: 600; margin-top: 6px">214</div><div style="font-size: 12px; color: #6E6E67; line-height: 1.45">updates from 9 sources since yesterday</div></div>
+<div style="border: 1px solid #E4E3DE; border-radius: 10px; padding: 12px"><span class="cap">2 · Rank</span><div style="font-size: 13px; font-weight: 600; margin-top: 6px; line-height: 1.35">urgency × impact × ownership</div><div style="font-size: 12px; color: #6E6E67; line-height: 1.45; margin-top: 4px">routine commits, syncs and comments are suppressed</div></div>
+<div style="border: 1px solid #DCCFB6; background: #FAF6EE; border-radius: 10px; padding: 12px"><span class="cap" style="color: #7A6440">3 · Surface</span><div style="font-size: 20px; font-weight: 600; margin-top: 6px; color: #5E4C2E">3–7</div><div style="font-size: 12px; color: #4E4E49; line-height: 1.45">items, each with the reason and the next action</div></div>
+</div>
+<p style="font-size: 12.5px; color: #4E4E49; line-height: 1.55">Items resolve themselves: finishing the blocking task, marking the invoice paid or converting the lead removes it from both the brief and the dashboard.</p>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
